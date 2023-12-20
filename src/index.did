@@ -1,0 +1,11 @@
+service: () -> {
+    contains: (nat32) -> (bool) query;
+    get: (nat32) -> (opt record {counter:nat64; comment:text}) query;
+    insert: (nat32, record {counter:nat64; comment:text}) -> (opt record {counter:nat64; comment:text});
+    isEmpty: () -> (bool) query;
+    items: () -> (vec record {nat32; record {counter:nat64; comment:text}}) query;
+    keys: () -> (vec nat32) query;
+    len: () -> (nat64) query;
+    remove: (nat32) -> (opt record {counter:nat64; comment:text});
+    values: () -> (vec record {counter:nat64; comment:text}) query;
+}

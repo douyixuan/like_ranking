@@ -6,11 +6,10 @@
         "canister_deploy_local": "dfx deploy like_ranking",
         "canister_deploy_mainnet": "dfx deploy --network ic like_ranking",
         "canister_uninstall": "dfx canister uninstall-code like_ranking",
-        "canister_call_get_message": "dfx canister call like_ranking getMessage",
-        "canister_call_set_message": "dfx canister call like_ranking setMessage '(\"Hello world!\")'"
+        "dfx_call": "dfx canister call"
     },
     "dependencies": {
+        "@dfinity/agent": "^0.20.2",
         "azle": "0.19.0"
     }
 }
-
