@@ -1,0 +1,13 @@
+{
+    "canisters": {
+        "like_ranking": {
+            "type": "custom",
+            "main": "src/index.ts",
+            "candid": "src/index.did",
+            "build": "npx azle like_ranking",
+            "wasm": ".azle/like_ranking/like_ranking.wasm",
+            "gzip": true
+        }
+    }
+}
+
