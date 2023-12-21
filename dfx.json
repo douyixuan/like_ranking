@@ -1,12 +1,16 @@
 {
     "canisters": {
-        "like_ranking": {
+        "like_collector": {
             "type": "custom",
-            "main": "src/index.ts",
-            "candid": "src/index.did",
-            "build": "npx azle like_ranking",
-            "wasm": ".azle/like_ranking/like_ranking.wasm",
-            "gzip": true
+            "main": "src/like_collector/index.ts",
+            "candid": "src/like_collector/index.did",
+            "build": "npx azle like_collector",
+            "wasm": ".azle/like_collector/like_collector.wasm",
+            "gzip": true,
+            "declarations": {
+                "output": "test/dfx_generated/like_collector",
+                "node_compatibility": true
+            }
         }
     }
 }
