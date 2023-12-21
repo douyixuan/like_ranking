@@ -3,7 +3,9 @@
         "dfx_install": "DFX_VERSION=0.15.1 sh -ci \"$(curl -fsSL https://sdk.dfinity.org/install.sh)\"",
         "replica_start": "dfx start --background",
         "replica_stop": "dfx stop",
-        "dfx_call": "dfx canister call"
+        "dfx_call": "dfx canister call",
+        "pretest": "ts-node --transpile-only --ignore=false test/pretest.ts",
+        "test": "ts-node --transpile-only --ignore=false test/test.ts"
     },
     "dependencies": {
         "@dfinity/agent": "^0.20.2",

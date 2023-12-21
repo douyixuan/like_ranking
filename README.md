@@ -1,8 +1,11 @@
 # like_ranking
 
-Welcome to your first Azle project! This example project will help you to deploy your first canister (application) to the Internet Computer (IC) decentralized cloud. It is a simple getter/setter canister. You can always refer to [The Azle Book](https://demergent-labs.github.io/azle/) for more in-depth documentation.
+Welcome to Like Ranking project! It is a simple getter/setter-like canister. Base on the data from web3 community, we can build a heat map of different organizations, various tools and so on, which can give directions for the new-to-web3. What's more, we can expand this app to record the real facilities, places or organizations. Every voice will be counted. Everyone will be treated equally.
 
-`dfx` is the tool you will use to interact with the IC locally and on mainnet. If you don't already have it installed:
+## get started
+
+`dfx` is the tool you will use to interact with the IC locally and on mainnet.
+If you don't already have it installed:
 
 ```bash
 npm run dfx_install
@@ -24,14 +27,13 @@ Now you can deploy your canister locally:
 
 ```bash
 npm install
-npm run canister_deploy_local
+LIKE_COLLECTOR_PRINCIPAL=bkyz2-fmaaa-aaaaa-qaaaq-cai && dfx deploy
 ```
 
-To call the methods on your canister:
+To test the methods on your canister:
 
 ```bash
-npm run canister_call_get_message
-npm run canister_call_set_message
+n
 ```
 
 If you run the above commands and then call `npm run canister_call_get_message` you should see:

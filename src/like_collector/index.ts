@@ -1,28 +1,17 @@
 import {
     bool,
     Canister,
-    nat32,
     nat64,
     Opt,
     query,
-    Record,
     StableBTreeMap,
-    text,
     Tuple,
     update,
     Vec
 } from 'azle';
 
-// stable memory for 
-const Key = nat32;
-type Key = typeof Key.tsType;
+import {Key, Value} from './types';
 
-const likeAndWish = Record({
-    counter: nat64,
-    comment: text
-});
-const Value = likeAndWish;
-type Value = typeof Value.tsType;
 let map = StableBTreeMap<Key, Value>(0);
 
 export default Canister({

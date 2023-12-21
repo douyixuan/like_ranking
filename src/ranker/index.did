@@ -1,0 +1,3 @@
+service: () -> {
+    isEmpty: () -> (bool);
+}
