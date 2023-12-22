@@ -1,13 +1,14 @@
 import {
-    bool,
     Canister,
     ic,
     init,
+    Opt,
     Principal,
+    Record,
     update,
 } from 'azle';
 
-import {Key, Value} from '../like_collector/types';
+import {Key, Value, zeroValue } from '../like_collector/types';
 
 import LikeCollectorCanister from '../like_collector';
 let likeCollector: typeof LikeCollectorCanister;
@@ -21,9 +22,9 @@ export default Canister({
             )
         );
     }),
-    isEmpty: update([], bool, async () => {
-        return await ic.call(likeCollector.isEmpty, {
-            args: []
+    register: update([Key], Opt(Value), async (key) => {
+        return await ic.call(likeCollector.insert, {
+            args: [key, zeroValue]
         });
     }),
 });

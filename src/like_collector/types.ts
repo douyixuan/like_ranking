@@ -15,3 +15,4 @@ const LikeAndWish = Record({
 
 export const Value = LikeAndWish;
 export type Value = typeof Value.tsType;
+export const zeroValue = { counter: 0, comment: "" };

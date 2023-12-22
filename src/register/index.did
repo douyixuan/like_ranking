@@ -1,0 +1,3 @@
+service: () -> {
+    register: (nat32) -> (opt record {counter:nat64; comment:text});
+}

@@ -11,7 +11,24 @@
                 "output": "test/dfx_generated/ranker",
                 "node_compatibility": true
             },
-            "env": ["LIKE_COLLECTOR_PRINCIPAL"]
+            "env": [
+                "LIKE_COLLECTOR_PRINCIPAL"
+            ]
+        },
+        "register": {
+            "type": "custom",
+            "main": "src/register/index.ts",
+            "candid": "src/register/index.did",
+            "build": "npx azle register",
+            "wasm": ".azle/register/register.wasm",
+            "gzip": true,
+            "declarations": {
+                "output": "test/dfx_generated/register",
+                "node_compatibility": true
+            },
+            "env": [
+                "LIKE_COLLECTOR_PRINCIPAL"
+            ]
         },
         "like_collector": {
             "type": "custom",
